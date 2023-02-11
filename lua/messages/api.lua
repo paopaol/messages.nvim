@@ -11,7 +11,7 @@ M.open_float = function(text)
   vim.api.nvim_buf_set_lines(bufnr, 0, -1, true, lines)
   vim.api.nvim_buf_set_name(bufnr, settings.buffer_name)
   vim.api.nvim_buf_set_option(bufnr, 'bufhidden', 'delete')
-  vim.ap.nvim_buf_set_keymaq(bufnr, 'n', 'q', ":wincmd c<cr>", { noremap = true });
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'q', ":wincmd c<cr>", { noremap = true });
 
   settings.post_open_float(winnr)
   return winnr
